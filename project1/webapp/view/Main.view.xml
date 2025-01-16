@@ -2,12 +2,13 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
     displayBlock="true">
-    <App >
-        <pages>
-            <Page title="{i18n>homePageTitle}">
-                <content>
-                    <Panel headerText="{i18n>helloPanelTitle}">
-                        <content>
+    <Shell >
+        <App >
+            <pages>
+                <Page title="{i18n>homePageTitle}">
+                    <content>
+                        <Panel headerText="{i18n>helloPanelTitle}">
+                            <content>
                                 <Button
                                     text="Say Hello"
                                     press=".onShowHello"/>
@@ -16,10 +17,11 @@
                                     description="Hello {/recipient/name}"
                                     valueLiveUpdate="true"
                                     width="60%"/> 
-                        </content>
-                    </Panel>
-                </content>
-            </Page>
-        </pages>
-    </App>
+                            </content>
+                        </Panel>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
 </mvc:View>
