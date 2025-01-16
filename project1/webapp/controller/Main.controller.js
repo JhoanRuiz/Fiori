@@ -7,22 +7,7 @@ sap.ui.define([
     "use strict";
 
     return Controller.extend("project1.controller.Main", {
-        onInit() {
-            // set data model on view
-            const oData = {
-               recipient : {
-                  name : "World"
-               }
-            };
-            const oModel = new JSONModel(oData);
-            this.getView().setModel(oModel);
-            // set i18n model on view
-            const i18nModel = new ResourceModel({
-                bundleName: "project1.i18n.i18n"
-            });
-            this.getView().setModel(i18nModel, "i18n");
-         },
-
+        
         onShowHello(){
             // read msg from i18n model
             const oBundle = this.getView().getModel("i18n").getResourceBundle();
