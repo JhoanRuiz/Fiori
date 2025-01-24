@@ -1,0 +1,16 @@
+<mvc:View controllerName="gestorcontenidos.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <VBox >
+                <GenericTile header="Bono" subheader="Subtitle" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" >
+                    <TileContent footer="Acceder">
+                        <ImageContent src="sap-icon://permission" />
+                                              
+                    </TileContent>
+                </GenericTile>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>
