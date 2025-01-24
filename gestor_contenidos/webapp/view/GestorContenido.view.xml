@@ -3,13 +3,20 @@
     xmlns="sap.m"
     xmlns:core="sap.ui.core"
     xmlns:l="sap.ui.layout">
+    <!--00001: Pestaña de cabecera Información general-->
+    <!--00002: Pestaña de cabecera Preguntas Frecuentes-->
+    <!--00003: Panel Composición Bono-->
+    <!--00004: Panel Tooltips-->
+    <!--00005: Panel Performance Individual-->
     <Page title="{i18n>title}">
         <IconTabBar
 		    id="idIconTabBarNoIcons"
 		    expanded="{device>/isNoPhone}"
 		    class="sapUiResponsiveContentPadding">
 		    <items>
+                <!--00001: Pestaña de cabecera Información general-->
 			    <IconTabFilter text="Información general" key="infogeneral">
+                    <!--00003: Panel Composición Bono-->
                     <Panel width="auto" class="sapUiResponsiveMargin">
                         <headerToolbar>
                             <OverflowToolbar>
@@ -22,11 +29,14 @@
                             width="100%">
                                 <TextArea 
                                     value="Para ser elegible al cobro deberías estar activo en la fecha de pago informada. El cálculo del bono será proporcional a los días trabajados, Tené en cuenta que si durante el año tuviste algún cambio de seniotiry o en el scope de tu posición, el cálculo del bono reflejará estas propiedades. Ingresos entre octube y diciembre no son elegibles al pago del bono del año de su ingreso." 
-                                     growing="true" 
-                                     growingMaxLines="5" 
-                                     width="100%"/>
+                                    growing="true" 
+                                    growingMaxLines="5" 
+                                    width="100%"/>
 		                </l:HorizontalLayout>
                     </Panel>
+                    <!--00003: Panel Composición Bono-->
+
+                    <!--00004: Panel Tooltips-->
                     <Panel width="auto" class="sapUiResponsiveMargin">
                         <headerToolbar>
                             <OverflowToolbar>
@@ -35,19 +45,49 @@
                                 <Button type="Emphasized" text="Agregar tooltip"/>
 			                </OverflowToolbar>
 		                </headerToolbar>
-                        
-                            <ComboBox
-                                items="Performance Individual">
-                                <core:Item key="per" text="Performance Individual" />
-                                
-                            </ComboBox>
-                       
+                        <!--00005: Panel Performance Individual-->
+                        <Panel expandable="true" width="auto" class="sapUiResponsiveMargin">
+		                    <headerToolbar>
+			                    <OverflowToolbar style="Clear">
+				                    <Title text="Performance Individual" />
+				                    <ToolbarSpacer />
+				                    <Button icon="sap-icon://edit" />
+				                    <Button icon="sap-icon://delete" />
+			                    </OverflowToolbar>
+		                    </headerToolbar>
+                            <HBox>
+					            <Label class="sapUiTinyMarginEnd" text="Label:" />
+				            </HBox>
+				            <Select
+					            id="select"
+					            showSecondaryValues= "true"
+					            items="Performance Individual"
+                                width="100%">
+					            <core:ListItem text="Performance Individual"/>
+                                <core:ListItem text="Performance Matrix"/>
+				            </Select>
+                            <HBox>
+					            <Label class="sapUiTinyMarginEnd" text="Tooltip" />
+				            </HBox>
+                            <TextArea 
+                                value="Para ser elegible al cobro deberías estar activo en la fecha de pago informada. El cálculo del bono será proporcional a los días trabajados, Tené en cuenta que si durante el año tuviste algún cambio de seniotiry o en el scope de tu posición, el cálculo del bono reflejará estas propiedades. Ingresos entre octube y diciembre no son elegibles al pago del bono del año de su ingreso." 
+                                growing="true" 
+                                growingMaxLines="5" 
+                                width="100%"/>
+		                
+		                </Panel>
+                        <!--00005: Panel Performance Individual-->
                     </Panel>
-			    </IconTabFilter>
+                   <!--00004: Panel Tooltips-->
+			    
+                </IconTabFilter>
+                <!--00001: Pestaña de cabecera Información general-->
 
+                <!--00002: Pestaña de cabecera Preguntas Frecuentes-->
 			    <IconTabFilter text="Preguntas frecuentes" key="preguntasfrec">
 				
 			    </IconTabFilter>
+                <!--00002: Pestaña de cabecera Preguntas Frecuentes-->
 		    </items>
 	    </IconTabBar>
     </Page>
