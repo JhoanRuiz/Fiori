@@ -4,10 +4,13 @@
     <Page id="page" title="{i18n>title}">
         <content>
             <VBox >
-                <GenericTile header="Bono" subheader="Subtitle" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" >
+                <GenericTile 
+                            header="Bono" 
+                            subheader="Subtitle" 
+                            class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
+                            press=".onBono">
                     <TileContent footer="Acceder">
                         <ImageContent src="sap-icon://permission" />
-                                              
                     </TileContent>
                 </GenericTile>
             </VBox>

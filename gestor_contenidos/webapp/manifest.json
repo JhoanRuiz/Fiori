@@ -33,7 +33,7 @@
         }
     },
     "sap.ui5": {
-        "flexEnabled": true,
+        "flexEnabled": false,
         "dependencies": {
             "minUI5Version": "1.132.0",
             "libs": {
@@ -79,12 +79,26 @@
                     "target": [
                         "TargetMain"
                     ]
+                },
+                {
+                    "name": "RouteGestorContenido",
+                    "pattern": "GestorContenido",
+                    "target": [
+                        "TargetGestorContenido"
+                    ]
                 }
             ],
             "targets": {
                 "TargetMain": {
                     "id": "Main",
                     "name": "Main"
+                },
+                "TargetGestorContenido": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "id": "GestorContenido",
+                    "name": "GestorContenido"
                 }
             }
         },
