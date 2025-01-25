@@ -76,14 +76,10 @@
           "bundleName": "project1.i18n.i18n"
         }
       },
-      "": {
+      "invoice": {
         "dataSource": "mainService",
         "preload": true,
         "settings": {}
-      },
-      "invoice":{
-        "type": "sap.ui.model.json.JSONModel",
-        "uri": "localService/Invoices.json"
       }
     },
     "resources": {
