@@ -8,22 +8,22 @@
     <!--00003: Panel Composición Bono-->
     <!--00004: Panel Tooltips-->
     <!--00005: Panel Performance Individual-->
-    <Page title="{i18n>title}">
+    <Page title="{i18n>title_gc}">
         <IconTabBar
 		    id="idIconTabBarNoIcons"
 		    expanded="{device>/isNoPhone}"
 		    class="sapUiResponsiveContentPadding">
 		    <items>
                 <!--00001: Pestaña de cabecera Información general-->
-			    <IconTabFilter text="Información general" key="infogeneral">
+			    <IconTabFilter text="{i18n>inf_general}" key="infogeneral">
                     <!--00003: Panel Composición Bono-->
                     <Panel width="auto" class="sapUiResponsiveMargin">
                         <headerToolbar>
                             <OverflowToolbar>
-                                <Title text="Composición de bono"/>
+                                <Title text="{i18n>comp_bono}"/>
 			                </OverflowToolbar>
 		                </headerToolbar>
-                        <Text text="Alerta (Andes)" class="sapUiTinyMarginTop"/>
+                        <Text text="{i18n>alert_andes}" class="sapUiTinyMarginTop"/>
                         <l:HorizontalLayout 
                             class="sapUiContentPadding" 
                             width="100%">
@@ -40,16 +40,16 @@
                     <Panel width="auto" class="sapUiResponsiveMargin">
                         <headerToolbar>
                             <OverflowToolbar>
-                                <Title text="Tooltips"/>
+                                <Title text="{i18n>toolstip}"/>
                                 <ToolbarSpacer />
-                                <Button type="Emphasized" text="Agregar tooltip"/>
+                                <Button type="Emphasized" text="{i18n>ag_tooltip}"/>
 			                </OverflowToolbar>
 		                </headerToolbar>
                         <!--00005: Panel Performance Individual-->
                         <Panel expandable="true" width="auto" class="sapUiResponsiveMargin">
 		                    <headerToolbar>
 			                    <OverflowToolbar style="Clear">
-				                    <Title text="Performance Individual" />
+				                    <Title text="{i18n>PI}" />
 				                    <ToolbarSpacer />
 				                    <Button icon="sap-icon://edit" />
 				                    <Button icon="sap-icon://delete" />
@@ -74,9 +74,36 @@
                                 growing="true" 
                                 growingMaxLines="5" 
                                 width="100%"/>
-		                
+
 		                </Panel>
                         <!--00005: Panel Performance Individual-->
+                            
+                            <!--00006 Lista-->
+                            <List 
+                                headerText="Tooltips guardados"
+                                items="{path: 'mtooltip>/TooltipsCollection'}" >
+                                <CustomListItem >
+                                    <Panel expandable="false" width="auto" class="sapUiResponsiveMargin">
+                                        <headerToolbar>
+			                                <OverflowToolbar style="Clear">
+				                                <Title text="{mtooltip>Label}" />
+				                                <ToolbarSpacer />
+				                                <Button icon="sap-icon://edit" />
+				                                <Button icon="sap-icon://delete" />
+			                                </OverflowToolbar>
+		                                </headerToolbar>
+                                        <HBox>
+                                            <Label class="sapUiSmallMarginEnd" text="Label:" />
+				                        </HBox>
+                                        <Text  width="100%" text="{mtooltip>Label}"/>
+                                        <HBox>
+        			                        <Label class="sapUiSmallMarginEnd" text="Tooltip" />
+				                        </HBox>
+                                        <Text width="100%" text="{mtooltip>Tooltip}"/>
+                                    </Panel>
+                                </CustomListItem>
+                            </List>
+                            <!--00006 Lista-->
                     </Panel>
                    <!--00004: Panel Tooltips-->
 			    

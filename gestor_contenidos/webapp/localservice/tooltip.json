@@ -1,0 +1,13 @@
+{
+    "TooltipsCollection":[
+        {"Label" : "Perfomance Individual",
+         "Tooltip":"Para ser elegible al cobro deberías estar activo en la fecha de pago informada. El cálculo del bono será proporcional a los días trabajados, Tené en cuenta que si durante el año tuviste algún cambio de seniotiry o en el scope de tu posición, el cálculo del bono reflejará estas propiedades. Ingresos entre octube y diciembre no son elegibles al pago del bono del año de su ingreso."    
+        },
+        {"Label" : "Perfomance Matrix",
+         "Tooltip":"Para ser elegible al cobro deberías estar activo en la fecha de pago informada. El cálculo del bono será proporcional a los días trabajados, Tené en cuenta que si durante el año tuviste algún cambio de seniotiry o en el scope de tu posición, el cálculo del bono reflejará estas propiedades. Ingresos entre octube y diciembre no son elegibles al pago del bono del año de su ingreso."    
+        },
+        {"Label" : "Perfomance Matrix",
+        "Tooltip":"Para ser elegible al cobro deberías estar activo en la fecha de pago informada. El cálculo del bono será proporcional a los días trabajados, Tené en cuenta que si durante el año tuviste algún cambio de seniotiry o en el scope de tu posición, el cálculo del bono reflejará estas propiedades. Ingresos entre octube y diciembre no son elegibles al pago del bono del año de su ingreso."    
+       }
+    ]
+}

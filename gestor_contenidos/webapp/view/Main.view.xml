@@ -5,11 +5,11 @@
         <content>
             <VBox >
                 <GenericTile 
-                            header="Bono" 
-                            subheader="Subtitle" 
+                            header="{i18n>bono}" 
+                            subheader="{i18n>subtitle}" 
                             class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
                             press=".onBono">
-                    <TileContent footer="Acceder">
+                    <TileContent footer="{i18n>acceder}">
                         <ImageContent src="sap-icon://permission" />
                     </TileContent>
                 </GenericTile>
