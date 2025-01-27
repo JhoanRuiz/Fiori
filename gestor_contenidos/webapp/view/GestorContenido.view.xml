@@ -25,8 +25,7 @@
 		                </headerToolbar>
                         <Text text="{i18n>008_alert_andes}" class="sapUiTinyMarginTop"/>
                         <l:HorizontalLayout 
-                            class="sapUiContentPadding" 
-                            width="100%">
+                            class="sapUiContentPadding">
                                 <TextArea 
                                     value="Para ser elegible al cobro deberías estar activo en la fecha de pago informada. El cálculo del bono será proporcional a los días trabajados, Tené en cuenta que si durante el año tuviste algún cambio de seniotiry o en el scope de tu posición, el cálculo del bono reflejará estas propiedades. Ingresos entre octube y diciembre no son elegibles al pago del bono del año de su ingreso." 
                                     growing="true" 
