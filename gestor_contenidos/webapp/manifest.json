@@ -19,6 +19,10 @@
             "tooltip-srv":{
                 "uri": "localservice/tooltip.json",
                 "type": "JSON"
+            },
+            "pregunta-srv":{
+                "uri": "localservice/preguntasfrecuentes.json",
+                "type": "JSON"
             }
         }
     },
@@ -61,6 +65,10 @@
             "mtooltip":{
                 "type": "sap.ui.model.json.JSONModel",
                 "dataSource": "tooltip-srv"
+            },
+            "mpregunta":{
+                "type": "sap.ui.model.json.JSONModel",
+                "dataSource": "pregunta-srv"
             }
         },
         "resources": {

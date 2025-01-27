@@ -1,15 +1,15 @@
 <mvc:View controllerName="gestorcontenidos.controller.Main"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
+    <Page id="page" title="{i18n>001_title}">
         <content>
             <VBox >
                 <GenericTile 
-                            header="{i18n>bono}" 
-                            subheader="{i18n>subtitle}" 
+                            header="{i18n>002_bono}" 
+                            subheader="{i18n>003_subtitle}" 
                             class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
                             press=".onBono">
-                    <TileContent footer="{i18n>acceder}">
+                    <TileContent footer="{i18n>004_acceder}">
                         <ImageContent src="sap-icon://permission" />
                     </TileContent>
                 </GenericTile>

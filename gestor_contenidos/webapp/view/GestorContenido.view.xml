@@ -8,22 +8,22 @@
     <!--00003: Panel Composición Bono-->
     <!--00004: Panel Tooltips-->
     <!--00005: Panel Performance Individual-->
-    <Page title="{i18n>title_gc}">
+    <Page title="{i18n>001_title}">
         <IconTabBar
 		    id="idIconTabBarNoIcons"
 		    expanded="{device>/isNoPhone}"
 		    class="sapUiResponsiveContentPadding">
 		    <items>
                 <!--00001: Pestaña de cabecera Información general-->
-			    <IconTabFilter text="{i18n>inf_general}" key="infogeneral">
+			    <IconTabFilter text="{i18n>006_inf_general}" key="infogeneral">
                     <!--00003: Panel Composición Bono-->
                     <Panel width="auto" class="sapUiResponsiveMargin">
                         <headerToolbar>
                             <OverflowToolbar>
-                                <Title text="{i18n>comp_bono}"/>
+                                <Title text="{i18n>007_comp_bono}"/>
 			                </OverflowToolbar>
 		                </headerToolbar>
-                        <Text text="{i18n>alert_andes}" class="sapUiTinyMarginTop"/>
+                        <Text text="{i18n>008_alert_andes}" class="sapUiTinyMarginTop"/>
                         <l:HorizontalLayout 
                             class="sapUiContentPadding" 
                             width="100%">
@@ -40,16 +40,16 @@
                     <Panel width="auto" class="sapUiResponsiveMargin">
                         <headerToolbar>
                             <OverflowToolbar>
-                                <Title text="{i18n>toolstip}"/>
+                                <Title text="{i18n>009_toolstip}"/>
                                 <ToolbarSpacer />
-                                <Button type="Emphasized" text="{i18n>ag_tooltip}"/>
+                                <Button type="Emphasized" text="{i18n>010_ag_tooltip}"/>
 			                </OverflowToolbar>
 		                </headerToolbar>
                         <!--00005: Panel Performance Individual-->
                         <Panel expandable="true" width="auto" class="sapUiResponsiveMargin">
 		                    <headerToolbar>
 			                    <OverflowToolbar style="Clear">
-				                    <Title text="{i18n>PI}" />
+				                    <Title text="{i18n>011_PI}" />
 				                    <ToolbarSpacer />
 				                    <Button icon="sap-icon://edit" />
 				                    <Button icon="sap-icon://delete" />
@@ -59,7 +59,6 @@
 					            <Label class="sapUiTinyMarginEnd" text="Label:" />
 				            </HBox>
 				            <Select
-					            id="select"
 					            showSecondaryValues= "true"
 					            items="Performance Individual"
                                 width="100%">
@@ -74,7 +73,6 @@
                                 growing="true" 
                                 growingMaxLines="5" 
                                 width="100%"/>
-
 		                </Panel>
                         <!--00005: Panel Performance Individual-->
                             
@@ -83,6 +81,7 @@
                                 headerText="Tooltips guardados"
                                 items="{path: 'mtooltip>/TooltipsCollection'}" >
                                 <CustomListItem >
+                                    <!--00007 Panel para los tooltip guardados-->
                                     <Panel expandable="false" width="auto" class="sapUiResponsiveMargin">
                                         <headerToolbar>
 			                                <OverflowToolbar style="Clear">
@@ -101,18 +100,82 @@
 				                        </HBox>
                                         <Text width="100%" text="{mtooltip>Tooltip}"/>
                                     </Panel>
+                                    <!--00007 Panel para los tooltip guardados-->
                                 </CustomListItem>
                             </List>
                             <!--00006 Lista-->
                     </Panel>
                    <!--00004: Panel Tooltips-->
-			    
                 </IconTabFilter>
                 <!--00001: Pestaña de cabecera Información general-->
 
+
+
                 <!--00002: Pestaña de cabecera Preguntas Frecuentes-->
-			    <IconTabFilter text="Preguntas frecuentes" key="preguntasfrec">
-				
+			    <IconTabFilter text="{i18n>pre_frecuen}" key="preguntasfrec">
+                    <!--00008: Panel Preguntas Frecuentes-->
+                    <Panel width="auto" class="sapUiResponsiveMargin">
+                        <headerToolbar>
+                            <OverflowToolbar>
+                                <Title text="{i18n>pre_frecuen}"/>
+                                <ToolbarSpacer />
+                                <Button type="Emphasized" text="{i18n>car_preg}"/>
+                                <Button type="Emphasized" text="{i18n>agr_preg}"/>
+			                </OverflowToolbar>
+		                </headerToolbar>
+                        <HBox>
+					        <Label class="sapUiTinyMarginEnd" text="Pregunta:" />
+    				    </HBox>
+	    			    <Select
+		    			    showSecondaryValues= "true"
+				    	    width="100%">
+					        <core:ListItem text="¿Cómo se determina la elegibilidad?"/>
+                            <core:ListItem text="¿Cuándo se paga el bono?"/>
+                            <core:ListItem text="¿Cómo se calcula el bono?"/>
+                        </Select>
+                        <HBox>
+					        <Label class="sapUiTinyMarginEnd" text="Respuesta:" />
+				        </HBox>
+                        <TextArea 
+                            value="Acá va la respuesta"
+                            growing="true" 
+                            growingMaxLines="5" 
+                            width="100%"/>
+                    </Panel>
+                    <!--00008: Panel Preguntas Frecuentes-->
+
+                    <!--00010: Lista de Preguntas Frecuentes-->
+                    <List
+                        items="{path: 'mpregunta>/PreguntaCollection'}">
+                        <CustomListItem >
+                            <!--00009: Panel de lista de Preguntas Frecuentes-->
+                            <Panel expandable="true" width="auto" class="sapUiResponsiveMargin">
+		                        <headerToolbar>
+			                        <OverflowToolbar style="Clear">
+				                        <Title text="{mpregunta>Pregunta}" />
+				                        <ToolbarSpacer />
+				                        <Button icon="sap-icon://edit" />
+				                        <Button icon="sap-icon://delete" />
+			                        </OverflowToolbar>
+		                        </headerToolbar>
+                                <HBox>
+					                <Label class="sapUiTinyMarginEnd" text="Pregunta:" />
+    				            </HBox>
+	    			            <Select
+		    			            id="selectid"
+			    		            showSecondaryValues= "true"
+				    	            width="100%">
+					                <core:ListItem text="{mpregunta>Pregunta}"/>
+                                </Select>
+                                <HBox>
+					                <Label class="sapUiTinyMarginEnd" text="Respuesta:" />
+				                </HBox>
+                                <Text text="{mpregunta>Respuesta}"/>
+		                    </Panel>
+                            <!--00005: Panel Performance Individual-->
+                        </CustomListItem >
+                    </List>
+                    <!--00010: Lista de Preguntas Frecuentes-->
 			    </IconTabFilter>
                 <!--00002: Pestaña de cabecera Preguntas Frecuentes-->
 		    </items>
