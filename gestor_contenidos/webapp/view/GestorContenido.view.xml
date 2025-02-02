@@ -41,17 +41,22 @@
                             <OverflowToolbar>
                                 <Title text="{i18n>009_toolstip}"/>
                                 <ToolbarSpacer />
-                                <Button type="Emphasized" text="{i18n>010_ag_tooltip}"/>
+                                <Button 
+                                    id="B_AGTOOLTIP"
+                                    type="Emphasized" 
+                                    text="{i18n>010_ag_tooltip}" 
+                                    press="onAGTOOLTIP"/>
 			                </OverflowToolbar>
 		                </headerToolbar>
                         <!--00005: Panel Performance Individual-->
-                        <Panel expandable="true" width="auto" class="sapUiResponsiveMargin">
+                        <Panel id="panelAGTooltip" 
+                            expandable="true" 
+                            width="auto" 
+                            class="sapUiResponsiveMargin">
 		                    <headerToolbar>
 			                    <OverflowToolbar style="Clear">
 				                    <Title text="{i18n>011_PI}" />
 				                    <ToolbarSpacer />
-				                    <Button icon="sap-icon://edit" />
-				                    <Button icon="sap-icon://delete" />
 			                    </OverflowToolbar>
 		                    </headerToolbar>
                             <HBox>
@@ -77,8 +82,11 @@
                             
                             <!--00006 Lista-->
                             <List 
+                                id="L_TOOLTIP"
                                 headerText="Tooltips guardados"
-                                items="{path: 'mtooltip>/TooltipsCollection'}" >
+                                items="{path: 'mtooltip>/TooltipsCollection'}"
+                                itemPress="onPressItem"
+                                >
                                 <CustomListItem >
                                     <!--00007 Panel para los tooltip guardados-->
                                     <Panel expandable="false" width="auto" class="sapUiResponsiveMargin">
@@ -86,14 +94,14 @@
 			                                <OverflowToolbar style="Clear">
 				                                <Title text="{mtooltip>Label}" />
 				                                <ToolbarSpacer />
-				                                <Button icon="sap-icon://edit" />
-				                                <Button icon="sap-icon://delete" />
+				                                <Button press="onBotonedit" icon="sap-icon://edit" />
+				                                <Button press="onBotondelete" icon="sap-icon://delete" />
 			                                </OverflowToolbar>
 		                                </headerToolbar>
                                         <HBox>
                                             <Label class="sapUiSmallMarginEnd" text="Label:" />
 				                        </HBox>
-                                        <Text  width="100%" text="{mtooltip>Label}"/>
+                                        <Text   width="100%" text="{mtooltip>Label}"/>
                                         <HBox>
         			                        <Label class="sapUiSmallMarginEnd" text="Tooltip" />
 				                        </HBox>
